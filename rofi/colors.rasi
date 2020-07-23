@@ -1,0 +1,12 @@
+/* Color-Scheme For All Themes*/
+
+* {
+    background-color:    @background;
+
+    background:    #12171bff;
+    foreground:    #b8a5a8ff;
+    background-alt:    #0b0d0dff;
+    text-color:    #b8a5a8ff;
+    primary:    #704955ff;
+    urgent:    #825058ff;
+}

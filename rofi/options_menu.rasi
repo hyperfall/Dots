@@ -1,0 +1,87 @@
+configuration {
+    
+    window-format:                  "{t}";
+    show-icons:                     true;
+    font:                           "DejaVu Sans 9";
+    columns:                        1;
+}
+
+* {
+    background-color:               transparent;
+
+    background:                     #00000000;
+    background-alt:                 #7E7985;
+    text-color:                     #ADB9C8;
+    primary:                        #D0B28E;
+    urgent:                         #BF616A;
+}
+
+window {
+    height:                         350; // 10 - 2*8
+    width:                          150px;
+    location:                       northwest;
+    anchor:                         northwest;
+    x-offset:                       1440;
+    y-offset:                       10;
+}
+
+entry {
+    expand:                         false;
+    margin:                         4px 4px;
+    background-color:               @background-alt;
+    padding:                        2px;
+    text-color:                     #211e2c;
+    border:                         2px;
+    border-color:                   @background-alt;
+    border-radius:                  3px;
+}
+
+mainbox {
+    children:                       [ entry, listview, message ];
+    padding:                        1px 1px;
+}
+
+element {
+    padding:                        9px;
+    orientation:                    horizontal;
+}
+
+element normal.urgent, element alternate.urgent {
+    background-color:               @urgent;
+}
+
+element normal.active, element alternate.active {
+    background-color:               @background-alt;
+    border:                         1px 1px solid 1px 1px;
+    border-radius:                  1;
+    border-color:                   transparent;
+}
+
+element selected {
+    border:                         2px 2px solid 2px 2px;
+    border-radius:                  8;
+    border-color:                   @primary;
+}
+
+element selected.urgent {
+    background-color:               @urgent;
+}
+
+element selected.active {
+    background-color:               @background-alt;
+}
+
+element-icon {
+    border:                         1px;
+    border-color:                   @primary;
+    border-radius:                  5;
+    padding:                        6px;
+}
+
+element-icon {
+    size: 32; /* Must be a power of 2 */
+}
+
+element-text {
+    vertical-align: 0.5;
+}

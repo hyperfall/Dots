@@ -1,0 +1,76 @@
+configuration {
+    
+    window-format:                  "{t}";
+    show-icons:                     true;
+    columns:                        1;
+}
+
+
+mainbox {
+    children:                       [ entry, listview, message ];
+    padding:                        8px 8px;
+}
+
+window {
+    height:                         200; // 10 - 2*8
+    width:                          250px;
+    location:                       northwest;
+    anchor:                         northwest;
+    background-color:               @background;
+    x-offset:                       30;
+    y-offset:                       7;
+    border-radius:                  8px;
+}
+
+entry {
+    expand:                         false;
+    margin:                         4px 3px;
+    background-color:               @background-alt;
+    padding:                        1px;
+    text-color:                     @foreground;
+    border:                         1px;
+    border-color:                   @background-alt;
+    border-radius:                  1px;
+}
+
+
+element selected {
+    border:                         2px 2px solid 2px 2px;
+    border-radius:                  5;
+    border-color:                   @primary;
+}
+
+element {
+    padding:                        8px;
+    orientation:                    horizontal;
+}
+
+element-icon {
+    border:                         1px;
+    border-color:                   @primary;
+    border-radius:                  5;
+    padding:                        5px;
+}
+
+element normal.urgent, element alternate.urgent {
+    background-color:               @urgent;
+}
+
+element normal.active, element alternate.active {
+    background-color:               @background-alt;
+    border:                         4px 4px solid 4px 4px;
+    border-radius:                  8;
+    border-color:                   transparent;
+}
+
+element selected.urgent {
+    background-color:               @urgent;
+}
+
+element selected.active {
+    background-color:               @background-alt;
+}
+
+element-text {
+    vertical-align: 0.5;
+}

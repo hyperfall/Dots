@@ -1,0 +1,72 @@
+configuration {
+    theme:              "config";
+    show-icons:                     true;
+    columns:                        1;
+}
+
+
+window {
+    height:                         200; // 10 - 2*8
+    width:                          250;
+    transparency:                   "real";
+    background-color:               @background;
+    location:                       northwest;
+    anchor:                         northwest;
+    x-offset:                       650;
+    y-offset:                       7;
+    border-radius:                  8px;
+
+}
+
+mainbox {
+    children:                       [ entry, listview, message ];
+    padding:                        8px 8px;
+}
+
+entry {
+    expand:                         false;
+    margin:                         4px 3px;
+    background-color:               @background-alt;
+    padding:                        1px;
+    border:                         1px;
+    border-color:                   @background-alt;
+    border-radius:                  1px;
+    text-color:                     @foreground;
+}
+
+element {
+    padding:                        10px;
+    orientation:                    horizontal;
+}
+
+element normal.urgent, element alternate.urgent {
+    background-color:               @urgent;
+}
+
+element normal.active, element alternate.active {
+    background-color:               @background-alt;
+    border:                         0px 0px solid 0px 0px;
+    border-radius:                  0;
+    border-color:                   transparent;
+}
+
+element selected {
+    border:                         2px 2px solid 2px 2px;
+    border-radius:                  5;
+    border-color:                   @primary;
+}
+
+element selected.urgent {
+    background-color:               @urgent;
+}
+
+element selected.active {
+    background-color:               @background-alt;
+}
+
+element-icon {
+    border:                         0px;
+    border-color:                   @primary;
+    border-radius:                  1;
+    padding:                        5px;
+}
