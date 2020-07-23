@@ -250,7 +250,7 @@ exec --no-startup-id blueman-applet
 #exec --no-startup-id redshift
 
 # // VolumeIcon
-exec --no-startup-id volctl
+exec --no-startup-id volumeicon
 
 # // Updater
 exec --no-startup-id pamac-tray
