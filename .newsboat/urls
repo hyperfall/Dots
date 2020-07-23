@@ -1,0 +1,31 @@
+#
+#   Windows
+#
+http://feeds.twit.tv/ww_video_hd.xml "Windows" "~Windows Weekly"
+
+#
+#   Tech Stuff
+#
+http://feeds.twit.tv/ttg_video_large.xml "TechStuff" "~TheTechGuy"
+http://feeds.twit.tv/hot_video_hd.xml "TechStuff" "~Hands-On Tech"
+http://feeds.twit.tv/aaa_video_hd.xml "TechStuff" "~All About Android"
+http://feeds.twit.tv/ipad_video_hd.xml "TechStuff" "~iOS Today"
+http://feeds.twit.tv/mbw_video_hd.xml "TechStuff" "~MacBreak Weekly"
+http://feeds.twit.tv/tnw_video_hd.xml "TechStuff" "~Tech News Weekly"
+http://feeds.twit.tv/twich_video_hd.xml "TechStuff" "~Computer Hardware"
+http://feeds.twit.tv/twig_video_hd.xml "TechStuff" "~ThisWeekInGoogle"
+http://feeds.twit.tv/vog.xml "TechStuff" "~Valley of Genius"
+
+#
+#     InfoSec
+#
+https://feeds.feedburner.com/SecurityIntelligence "InfoSec" "~SecurityIntelligence"
+https://feeds.feedburner.com/securityweek "InfoSec" "~SecurityWeek"
+https://feeds.feedburner.com/TheHackersNews "InfoSec" "~TheHackersNews"
+https://threatpost.com/feed "InfoSec" "~ThreatPost"
+http://securityweeklytv.swsgtv.libsynpro.com/rss "InfoSec" "~Securityweekly"
+http://hntvvideo.swsgtv.libsynpro.com/rss "InfoSec" "~Hack Nacked TV"
+http://feeds.feedburner.com/HackerMedley?format=xml "InfoSec" "~HackerMedley"
+http://feeds.feedburner.com/GibsonResearchNews "InfoSec" "~GibsonResearchNews"
+https://securitynewsletter.co/issues?format=rss "InfoSec" "~Securitynewsletter"
+http://feeds.twit.tv/sn_video_hd.xml "InfoSec" "~Security Now"

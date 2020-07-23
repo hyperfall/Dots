@@ -1,0 +1,64 @@
+!! URxvt Appearance
+URxvt*font:                 	xft:JetBrains Mono:bold:size=11,xft:MesloLGS NF:regular:size=10
+URxvt*imFont:               	xft:JetBrains Mono:bold:size=11,xft:MesloLGS NF:regular:size=10
+URxvt*boldFont:             	xft:JetBrains Mono:bold:size=11,xft:MesloLGS NF:bold:size=10
+URxvt*italicFont:           	xft:JetBrains Mono:italic:size=11,xft:MesloLGS NF:italic:size=10
+URxvt*boldItalicFont:     		xft:JetBrains Mono:regular:size=11,
+URxvt.letterSpace: 0
+URxvt.lineSpace: 1
+URxvt.geometry: 100x25
+URxvt.internalBorder: 20
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: true
+URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.iso14755: false
+URxvt.urlLauncher: firefox-developer-edition
+URxvt.underlineURLs: true
+URxvt.urlButton: 1
+
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.perl-ext-common: default,url-select,keyboard-select
+
+! special
+*.foreground:   #c5c8c6
+*.background:   [70]#242323
+*.cursorColor:  #c5c8c6
+
+! black
+*.color0:       #282a2e
+*.color8:       #373b41
+
+! red
+*.color1:       #eca73f
+*.color9:       #f1bb54
+
+! green
+*.color2:       #c5fd75
+*.color10:      #8cec8e
+
+! yellow
+*.color3:       #de935f
+*.color11:      #f0c674
+
+! blue
+*.color4:       #74d0f5
+*.color12:      #84c4fa
+
+! magenta
+*.color5:       #b0b0b0
+*.color13:      #d7d7d7
+
+! cyan
+*.color6:       #c3c3c3
+*.color14:      #7de7d9
+
+! white
+*.color7:       #707880
+*.color15:      #c5c8c6
+
+URxvt*depth: 32
+
