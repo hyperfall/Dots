@@ -258,7 +258,11 @@ exec --no-startup-id pamac-tray
 # // Clipboard 
 exec --no-startup-id clipit
 
-exec --no-startup-id glava --desktop
+# // Visualizer
+#exec --no-startup-id glava --desktop
+
+# // Network
+exec --no-startup-id nm-applet
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -286,8 +290,14 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness 
 # // BetterLockScreen
 bindsym $mod+shift+x exec betterlockscreen -l dim
 
+# // Does work but only in bar right click
+
+#bindsym --release button3 exec ~/xmenu/xmenu.sh
+
 # // Jgmenu
 bindsym Control+Mod1+m exec jgmenu_run >/dev/null 2>&1 &
+
+bindsym Control+Shift+Print exec maim -s | xclip -selection clipboard -t image/png
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
