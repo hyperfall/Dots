@@ -217,7 +217,8 @@ exec --no-startup-id nitrogen --restore &
 #exec_always --no-startup-id blurwal 
 
 # // Restart Dunst
-bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+#bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+bindsym $mod+Shift+d exec ~/.config/deadd/deadd-notification-center.sh
 
 # // Picom
 exec_always --no-startup-id picom --backend glx --experimental-backends -bc
@@ -244,7 +245,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id xfce4-power-manager
 
 # // Bluetooth Icon
-exec --no-startup-id blueman-applet
+#exec --no-startup-id blueman-applet
 
 # // Redshift Icon
 #exec --no-startup-id redshift

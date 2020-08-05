@@ -26,13 +26,13 @@ format-margin =
 format-offset =
 
 [colors]
-background =  ${xrdb:argbBg:#800F0F0F}
-#background =  ${xrdb:argbBg:color0}
+#background =  ${xrdb:argbBg:#800F0F0F}
+background =  #000000
 background-alt =  ${xrdb:color8}
 foreground =   #cccccc
 foreground-alt =  ${xrdb:color6}
 red =  ${xrdb:color1}
-errxr = #A16EE2
+errxr = #b8d308
 errxrm = #ccccccc
 errxrv1 = #ccccccc
 v1 = #ccccccc
@@ -83,21 +83,21 @@ font-1 = "icomoon:size=3;1"
 font-2 = FontAwesome5Free:style=Solid:size=10;1
 font-3 = Whitney Semibold:style=Medium:size=13;1
 font-4 = Whitney Semibold:style=Medium:size=10;1
-font-5 = MaterialIcons:size=10;1
+font-5 = MaterialIcons:size=11;1
 font-6 = Whitney Semibold:style=Medium:size=10;1
 font-7 = Weather Icons:size=12;1
 font-8 = FontAwesome5 Brands:style=Solid:size=10;1
 font-9 = Icons:style=Regular:size=10;1
-font-10 = Material Design Icons Desktop:style=Solid:size=10.5;1
+font-10 = Material Design Icons Desktop:style=Solid:size=11;1
 font-11 = Noto Sans Mono:size=10;0
 font-12 = Noto Sans Symbols:size=11;0
 font-13 = icomoon:size=11;0
+font-14 = Material Design Icons Desktop:pixelsize=20;5
 
 
-modules-left =  jgmenu title menu
-modules-center = i3x 
-#modules-right =   sep redshift brightness-level sep2 update-notify update sep battery sep2 sep pulseaudio vol-level sep2 bluetooth date showdesktop
-modules-right =  mpd2 mpd empty redshift date empty empty empty empty empty empty empty empty empty empty empty empty empty empty empty empty empty empty power showdesktop 
+modules-left =  jgmenu title 
+modules-center = i3  
+modules-right =  mpd2 mpd empty screenshot empty redshift date empty empty empty empty empty empty empty empty empty empty empty empty empty empty empty empty empty empty power showdesktop 
 
 tray-detached = true
 tray-position = center
@@ -126,7 +126,7 @@ type = custom/script
 exec = /usr/bin/date '+%T'
 interval = 2
 label = %output%
-click-left = /usr/bin/gsimplecal
+click-left = exec ~/.config/polybar/scripts/calendar.sh
 label-background = ${colors.background}
 label-padding = 2
 
@@ -196,9 +196,9 @@ click-left = ~/.config/i3/scripts/newworkspace.sh
 
 [module/power]
 type = custom/text
-content = ""
+content = ""
 content-foreground = ${colors.errxr}
-content-font = 12
+content-font = 10
 click-left = ~/.config/polybar/scripts/power.sh
 
 [module/sep2]
@@ -357,7 +357,7 @@ ramp-volume-2 ="󰕾 "
 ramp-headphones-0 ="  "
 ramp-headphones-1 ="  "
 
-[module/i3x]
+[module/i3]
 type = internal/i3
 pin-workspaces = true
 strip-wsnumbers = false
@@ -489,35 +489,9 @@ click-left = "jgmenu_run >/dev/null 2>&1 &"
 
 [module/showdesktop]
 type = custom/script
-exec = echo "󱋱"
+exec = echo "󰑝"
 click-left = exec i3-msg move scratchpad
 click-right = exec i3-msg [class=.*] scratchpad show
-
-[module/menu]
-type = custom/menu
-format-spacing = 1
-label-open = "󰯟"
-click-right = ~/.config/i3/scripts/newworkspace.sh
-format-font = 3
-label-open-foreground = ${colors.foreground}
-label-close =  Cancel
-label-close-foreground = ${colors.errxr}
-label-separator = "  |  "
-label-separator-foreground = ${colors.foreground}
-
-
-menu-0-0 = 󱋨 Shutdown
-menu-0-0-exec = ~/.config/polybar/scripts/shutdown.sh &
-menu-0-1 =  New-Workspace
-menu-0-1-exec = ~/.config/i3/scripts/newworkspace.sh &
-menu-0-2 =  Urxvt
-menu-0-2-exec = urxvt &
-menu-0-3 =  Nemo
-menu-0-3-exec = nemo &
-menu-0-4 = 龜 Firefox
-menu-0-4-exec = firefox-developer-edition &
-menu-0-5 =  Protonmail
-menu-0-5-exec = protonmail-desktop 
 
 [module/redshift]
 type = custom/script
@@ -528,6 +502,14 @@ click-left = source ~/.config/polybar/scripts/env.sh && ~/.config/polybar/script
 scroll-up = source ~/.config/polybar/scripts/env.sh && ~/.config/polybar/scripts/redshift.sh increase
 scroll-down = source ~/.config/polybar/scripts/env.sh && ~/.config/polybar/scripts/redshift.sh decrease
 interval=0.5
+
+[module/screenshot]
+type = custom/script
+exec = echo "󰨤"
+
+click-right = scrot "$(date +%s).png" -e 'mv "$f" ~/Pictures/Screenshots/ && dunstify -r "991030" "Say cheese..." "$f" -a scrot' &
+
+click-left = image=$(date +%s).png && maim -s -s -b 2.0 -p -5 -c 10,1,0.10 "$HOME/Pictures/Screenshots/$image" && dunstify -r "BFFF00" "Say cheese..." "$image" -a scrot &
 
 [module/weather]
 type = custom/script

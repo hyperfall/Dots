@@ -1,0 +1,10 @@
+aur: true
+automatch_providers: true
+clean_cached: true
+mirrors_sort_limit: 5
+optimize: true
+refresh_mirrors_startup: false
+repositories: true
+repositories_mthread_download: true
+sync_databases: true
+sync_databases_startup: true

@@ -1,0 +1,44 @@
+{
+    "com.github.katacarbix.ulauncher-dict-en": {
+        "id": "com.github.katacarbix.ulauncher-dict-en",
+        "url": "https://github.com/katacarbix/ulauncher-dict-en",
+        "updated_at": "2020-07-02T03:08:17.554333",
+        "last_commit": "50841bbd6690a81f18a9a0fbe9e96e5663066961",
+        "last_commit_time": "2020-04-09T23:00:03"
+    },
+    "com.github.pwnyprod.ulauncher-ipcopy": {
+        "id": "com.github.pwnyprod.ulauncher-ipcopy",
+        "url": "https://github.com/pwnyprod/ulauncher-ipcopy",
+        "updated_at": "2020-07-02T03:08:55.564027",
+        "last_commit": "cb9dccda390d2c4d1299148491c65c177066ad14",
+        "last_commit_time": "2020-01-19T13:42:10"
+    },
+    "com.github.glovecc.ulauncher-github-search": {
+        "id": "com.github.glovecc.ulauncher-github-search",
+        "url": "https://github.com/Glovecc/ulauncher-github-search",
+        "updated_at": "2020-07-02T03:09:14.740760",
+        "last_commit": "14b102191ce1a9ca4c2e67fbcc6b1269333df50e",
+        "last_commit_time": "2020-02-12T09:49:45"
+    },
+    "com.github.isacikgoz.ukill": {
+        "id": "com.github.isacikgoz.ukill",
+        "url": "https://github.com/isacikgoz/ukill",
+        "updated_at": "2020-07-02T03:12:25.994601",
+        "last_commit": "bc50d9f41d46b6813a5aeebddd15734dcdb9d8db",
+        "last_commit_time": "2019-05-28T18:30:00"
+    },
+    "com.github.nesivmi.ulauncher-translate": {
+        "id": "com.github.nesivmi.ulauncher-translate",
+        "url": "https://github.com/nesivmi/ulauncher-translate",
+        "updated_at": "2020-07-02T03:12:37.146489",
+        "last_commit": "9bf5513e57b37a3f68acce459f7c878e57e8a16d",
+        "last_commit_time": "2019-09-16T20:21:07"
+    },
+    "com.github.lifeofcoding.ulauncher-youtube": {
+        "id": "com.github.lifeofcoding.ulauncher-youtube",
+        "url": "https://github.com/lifeofcoding/ulauncher-youtube",
+        "updated_at": "2020-07-02T03:12:51.105724",
+        "last_commit": "1c5ea1b977bcda0d42898b51106753dab20d4ca1",
+        "last_commit_time": "2020-04-23T01:13:37"
+    }
+}

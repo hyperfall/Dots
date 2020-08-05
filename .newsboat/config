@@ -25,3 +25,15 @@ color info                                                  default   default
 color article                                               default   default
 color listnormal_unread                                     red   default
 color listfocus_unread                                      black     default   
+
+browser "nohup $FIREFOX --new-tab %u &>/dev/null &"
+
+# Open the URL associated with the current article with mpv(1).  See [1] and [2].  XXX: I
+# hope Newsboat sanitizes `%u`.
+macro o set browser ~/.newsboat/mpv.sh ; open-in-browser ; set browser $BROWSER
+macro O set browser ~/.newsboat/mpv.sh ; open-in-browser-and-mark-read ; set browser $BROWSER
+# [1]: https://wiki.archlinux.org/index.php/Newsbeuter#Pass_article_URL_to_external_command.
+# [2]: file:///usr/share/doc/newsboat/newsboat.html#_macro_support
+
+
+ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCtZO3K2p8mqFwiKWb9k7fXA" "title !~ \"AVGN|[Aa]ngry [Vv]ideo [Gg]ame [Nn]erd\""
